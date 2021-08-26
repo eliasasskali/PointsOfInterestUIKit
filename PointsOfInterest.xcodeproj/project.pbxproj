@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		1B04519126C13DEB00628D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04519026C13DEB00628D07 /* AppDelegate.swift */; };
 		1B04519326C13DEB00628D07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04519226C13DEB00628D07 /* SceneDelegate.swift */; };
-		1B04519526C13DEB00628D07 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04519426C13DEB00628D07 /* TableViewController.swift */; };
 		1B04519826C13DEB00628D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B04519626C13DEB00628D07 /* Main.storyboard */; };
 		1B04519A26C13DED00628D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B04519926C13DED00628D07 /* Assets.xcassets */; };
 		1B04519D26C13DED00628D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B04519B26C13DED00628D07 /* LaunchScreen.storyboard */; };
 		1B0451A626C13E4100628D07 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0451A526C13E4100628D07 /* POI.swift */; };
-		1B0451B026C2683A00628D07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0451AF26C2683A00628D07 /* DetailViewController.swift */; };
+		1B0451B026C2683A00628D07 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0451AF26C2683A00628D07 /* POIDetailViewController.swift */; };
 		1B0451B326C26DE400628D07 /* poiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0451B226C26DE400628D07 /* poiCell.swift */; };
+		1B84EC5026D39DCF00377554 /* POIListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC4F26D39DCF00377554 /* POIListViewController.swift */; };
+		1B84EC5226D39DE700377554 /* POIListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC5126D39DE700377554 /* POIListPresenter.swift */; };
+		1B84EC5426D39E1600377554 /* POIListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC5326D39E1600377554 /* POIListInteractor.swift */; };
+		1B84EC5626D39E2F00377554 /* POIListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC5526D39E2F00377554 /* POIListRouter.swift */; };
+		1B84EC5826D64BEB00377554 /* POIListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC5726D64BEB00377554 /* POIListBuilder.swift */; };
+		1B84EC5A26D6503100377554 /* POIListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC5926D6503100377554 /* POIListProtocols.swift */; };
+		1B84EC5D26D785FA00377554 /* POIDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC5C26D785FA00377554 /* POIDetailProtocols.swift */; };
+		1B84EC5F26D787E500377554 /* POIDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC5E26D787E500377554 /* POIDetailRouter.swift */; };
+		1B84EC6126D7888A00377554 /* POIDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC6026D7888A00377554 /* POIDetailPresenter.swift */; };
+		1B84EC6526D79ADA00377554 /* POIDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC6426D79ADA00377554 /* POIDetailBuilder.swift */; };
 		23C5AEB7C525932D5D07BE6B /* Pods_PointsOfInterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7918A2B3B63165572FE3D30D /* Pods_PointsOfInterest.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,14 +33,23 @@
 		1B04518D26C13DEB00628D07 /* PointsOfInterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointsOfInterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B04519026C13DEB00628D07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B04519226C13DEB00628D07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B04519426C13DEB00628D07 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		1B04519726C13DEB00628D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B04519926C13DED00628D07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B04519C26C13DED00628D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B04519E26C13DED00628D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B0451A526C13E4100628D07 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
-		1B0451AF26C2683A00628D07 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1B0451AF26C2683A00628D07 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
 		1B0451B226C26DE400628D07 /* poiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poiCell.swift; sourceTree = "<group>"; };
+		1B84EC4F26D39DCF00377554 /* POIListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListViewController.swift; sourceTree = "<group>"; };
+		1B84EC5126D39DE700377554 /* POIListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListPresenter.swift; sourceTree = "<group>"; };
+		1B84EC5326D39E1600377554 /* POIListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListInteractor.swift; sourceTree = "<group>"; };
+		1B84EC5526D39E2F00377554 /* POIListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListRouter.swift; sourceTree = "<group>"; };
+		1B84EC5726D64BEB00377554 /* POIListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListBuilder.swift; sourceTree = "<group>"; };
+		1B84EC5926D6503100377554 /* POIListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListProtocols.swift; sourceTree = "<group>"; };
+		1B84EC5C26D785FA00377554 /* POIDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailProtocols.swift; sourceTree = "<group>"; };
+		1B84EC5E26D787E500377554 /* POIDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailRouter.swift; sourceTree = "<group>"; };
+		1B84EC6026D7888A00377554 /* POIDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailPresenter.swift; sourceTree = "<group>"; };
+		1B84EC6426D79ADA00377554 /* POIDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailBuilder.swift; sourceTree = "<group>"; };
 		553203C69DAAA9DD0D92CFFE /* Pods-PointsOfInterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointsOfInterest.release.xcconfig"; path = "Target Support Files/Pods-PointsOfInterest/Pods-PointsOfInterest.release.xcconfig"; sourceTree = "<group>"; };
 		7918A2B3B63165572FE3D30D /* Pods_PointsOfInterest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PointsOfInterest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,8 +92,8 @@
 				1B04519226C13DEB00628D07 /* SceneDelegate.swift */,
 				1B0451B126C26DCF00628D07 /* Cells */,
 				1B0451A426C13E2400628D07 /* Models */,
+				1B84EC6626D7A07200377554 /* Modules */,
 				1B0451AC26C1428000628D07 /* Resources */,
-				1B0451AE26C142B800628D07 /* View Controllers */,
 			);
 			path = PointsOfInterest;
 			sourceTree = "<group>";
@@ -98,21 +116,46 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		1B0451AE26C142B800628D07 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1B04519426C13DEB00628D07 /* TableViewController.swift */,
-				1B0451AF26C2683A00628D07 /* DetailViewController.swift */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
 		1B0451B126C26DCF00628D07 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				1B0451B226C26DE400628D07 /* poiCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		1B84EC4E26D39D2600377554 /* POIListModule */ = {
+			isa = PBXGroup;
+			children = (
+				1B84EC4F26D39DCF00377554 /* POIListViewController.swift */,
+				1B84EC5126D39DE700377554 /* POIListPresenter.swift */,
+				1B84EC5326D39E1600377554 /* POIListInteractor.swift */,
+				1B84EC5526D39E2F00377554 /* POIListRouter.swift */,
+				1B84EC5726D64BEB00377554 /* POIListBuilder.swift */,
+				1B84EC5926D6503100377554 /* POIListProtocols.swift */,
+			);
+			path = POIListModule;
+			sourceTree = "<group>";
+		};
+		1B84EC5B26D785DC00377554 /* POIDetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				1B84EC5C26D785FA00377554 /* POIDetailProtocols.swift */,
+				1B84EC5E26D787E500377554 /* POIDetailRouter.swift */,
+				1B84EC6026D7888A00377554 /* POIDetailPresenter.swift */,
+				1B0451AF26C2683A00628D07 /* POIDetailViewController.swift */,
+				1B84EC6426D79ADA00377554 /* POIDetailBuilder.swift */,
+			);
+			path = POIDetailModule;
+			sourceTree = "<group>";
+		};
+		1B84EC6626D7A07200377554 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1B84EC4E26D39D2600377554 /* POIListModule */,
+				1B84EC5B26D785DC00377554 /* POIDetailModule */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		3952A15B059697C9B5F6A03D /* Frameworks */ = {
@@ -252,10 +295,19 @@
 			files = (
 				1B0451B326C26DE400628D07 /* poiCell.swift in Sources */,
 				1B0451A626C13E4100628D07 /* POI.swift in Sources */,
-				1B04519526C13DEB00628D07 /* TableViewController.swift in Sources */,
-				1B0451B026C2683A00628D07 /* DetailViewController.swift in Sources */,
+				1B84EC6526D79ADA00377554 /* POIDetailBuilder.swift in Sources */,
+				1B84EC5626D39E2F00377554 /* POIListRouter.swift in Sources */,
+				1B84EC5026D39DCF00377554 /* POIListViewController.swift in Sources */,
+				1B0451B026C2683A00628D07 /* POIDetailViewController.swift in Sources */,
+				1B84EC5A26D6503100377554 /* POIListProtocols.swift in Sources */,
+				1B84EC5826D64BEB00377554 /* POIListBuilder.swift in Sources */,
+				1B84EC5226D39DE700377554 /* POIListPresenter.swift in Sources */,
+				1B84EC5D26D785FA00377554 /* POIDetailProtocols.swift in Sources */,
+				1B84EC6126D7888A00377554 /* POIDetailPresenter.swift in Sources */,
+				1B84EC5426D39E1600377554 /* POIListInteractor.swift in Sources */,
 				1B04519126C13DEB00628D07 /* AppDelegate.swift in Sources */,
 				1B04519326C13DEB00628D07 /* SceneDelegate.swift in Sources */,
+				1B84EC5F26D787E500377554 /* POIDetailRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
         <!--Detail View Controller-->
         <scene sceneID="A4n-Qd-66q">
             <objects>
-                <tableViewController id="REl-iQ-vKa" customClass="DetailViewController" customModule="PointsOfInterest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="POIDetailView" id="REl-iQ-vKa" customClass="POIDetailViewController" customModule="PointsOfInterest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cem-kJ-iC7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9k-oC-rpa">
                                                     <rect key="frame" x="20" y="19" width="374" height="6"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -269,7 +269,7 @@
         <!--Points Of Interest-->
         <scene sceneID="qRZ-kJ-edz">
             <objects>
-                <tableViewController id="6Uu-6B-tqD" customClass="TableViewController" customModule="PointsOfInterest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="poiListVC" id="6Uu-6B-tqD" customClass="POIListViewController" customModule="PointsOfInterest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dfX-21-Fom">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,7 +297,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="titleLabel" destination="68J-3g-Od8" id="ds5-YU-Kn3"/>
-                                    <segue destination="REl-iQ-vKa" kind="show" identifier="showDetailPOI" id="Vc0-Eg-WvR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -315,6 +314,7 @@
         <!--Navigation Controller-->
         <scene sceneID="XFi-rk-xSp">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBp-Sh-UYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Ub3-Kf-eBS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YzM-dk-Vol">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -324,7 +324,6 @@
                         <segue destination="6Uu-6B-tqD" kind="relationship" relationship="rootViewController" id="ANu-Kr-jJQ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aBp-Sh-UYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-329" y="135"/>
         </scene>
