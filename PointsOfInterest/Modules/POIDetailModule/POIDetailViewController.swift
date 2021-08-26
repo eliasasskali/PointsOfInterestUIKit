@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 import MapKit
 
-class DetailViewController: UITableViewController {
+class POIDetailViewController: UITableViewController, POIDetailViewControllerInterface {
+    var presenter: POIDetailPresenterInterface?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var coordinatesLabel: UILabel!
@@ -26,35 +27,39 @@ class DetailViewController: UITableViewController {
     @IBOutlet weak var transportCell: UITableViewCell!
     @IBOutlet weak var addressCell: UITableViewCell!
     
-    var pointOfInterest: POI!
+    var poi: POI?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        titleLabel.text = pointOfInterest.title
-        coordinatesLabel.text = pointOfInterest.geocoordinates
+    func showPOIDetail(with poi: POI) {
+        titleLabel.text = poi.title
+        coordinatesLabel.text = poi.geocoordinates
         
-        if let description = pointOfInterest.desc {
+        if let description = poi.desc {
             descriptionLabel.text = description
         }
-        if let email = pointOfInterest.email {
+        if let email = poi.email {
             emailLabel.text = email
         }
-        if let phone = pointOfInterest.phone {
+        if let phone = poi.phone {
             phoneLabel.text = phone
         }
-        if let address = pointOfInterest.address {
+        if let address = poi.address {
             addressLabel.text = address
         }
-        if let transport = pointOfInterest.transport {
+        if let transport = poi.transport {
             transportLabel.text = transport
         }
         
         // Center and add pin of POI in map
-        centerAndPinMapOnLocation(poi: pointOfInterest, mapView: mapView)
+        centerAndPinMapOnLocation(poi: poi, mapView: mapView)
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        poi = presenter?.getPOI()
+        presenter?.notifyViewLoaded()
     }
     
     func centerAndPinMapOnLocation(poi: POI, mapView: MKMapView) {
@@ -80,23 +85,23 @@ class DetailViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 1:
-            if pointOfInterest.desc == nil {
+            if poi?.desc == nil {
                 return 0
             }
         case 2:
-            if pointOfInterest.email == nil {
+            if poi?.email == nil {
                 return 0
             }
         case 3:
-            if pointOfInterest.phone == nil {
+            if poi?.phone == nil {
                 return 0
             }
         case 4:
-            if pointOfInterest.transport == nil {
+            if poi?.transport == nil {
                 return 0
             }
         case 5:
-            if pointOfInterest.address == nil {
+            if poi?.address == nil {
                 return 0
             }
         default:
