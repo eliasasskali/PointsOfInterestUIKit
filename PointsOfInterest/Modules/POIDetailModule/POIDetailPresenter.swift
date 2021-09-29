@@ -18,7 +18,12 @@ class POIDetailPresenter: POIDetailPresenterInterface {
     }
     
     func getPOI() -> POI {
-        return poi!
+        if let poi = poi {
+            return poi
+        }
+        else {
+            return POI()
+        }
     }
     
 }

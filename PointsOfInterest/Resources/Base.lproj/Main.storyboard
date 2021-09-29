@@ -314,7 +314,6 @@
         <!--Navigation Controller-->
         <scene sceneID="XFi-rk-xSp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aBp-Sh-UYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Ub3-Kf-eBS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YzM-dk-Vol">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -324,6 +323,7 @@
                         <segue destination="6Uu-6B-tqD" kind="relationship" relationship="rootViewController" id="ANu-Kr-jJQ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBp-Sh-UYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-329" y="135"/>
         </scene>
